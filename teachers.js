@@ -1,1 +1,0 @@
-document.querySelectorAll(".fl").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".fl").forEach(x=>x.classList.toggle("on",x===b));const f=b.dataset.f;document.querySelectorAll(".tch").forEach(c=>c.classList.toggle("hide",f!=="hamisi"&&c.dataset.s!==f))}));
