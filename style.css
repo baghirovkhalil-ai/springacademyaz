@@ -116,3 +116,18 @@ footer a{margin:0 10px;color:var(--ink);text-decoration:underline}
 @media(max-width:900px){.mtgrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.mtgrid{grid-template-columns:repeat(2,1fr)}.tgrid{grid-template-columns:1fr}}
 main{overflow-x:clip}
+
+/* mobile menu */
+.menu{display:none;margin-left:auto;width:46px;height:46px;border-radius:12px;border:1px solid var(--ln);background:var(--card);cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.menu i{display:block;width:20px;height:2.5px;border-radius:2px;background:var(--ink);transition:transform .25s,opacity .2s}
+.menu[aria-expanded="true"] i:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.menu[aria-expanded="true"] i:nth-child(2){opacity:0}
+.menu[aria-expanded="true"] i:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+@media(max-width:860px){
+ .bar{flex-wrap:nowrap}
+ .menu{display:flex}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;margin:0;flex-direction:column;gap:2px;padding:10px 16px 18px;background:var(--bg);border-bottom:1px solid var(--ln);max-width:none;overflow:visible}
+ nav.open{display:flex}
+ nav a{padding:14px 12px;font-size:18px;border-radius:10px}
+ nav a.on{box-shadow:inset 3px 0 0 var(--acc)}
+}

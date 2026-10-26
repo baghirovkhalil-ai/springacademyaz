@@ -21,4 +21,7 @@ const ap=f=>{fl.forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===f));docum
 fl.forEach(b=>b.addEventListener("click",()=>{ap(b.dataset.f);history.replaceState(null,"","?f="+b.dataset.f)}));
 const q=new URLSearchParams(location.search).get("f");
 ap(q&&[...fl].some(b=>b.dataset.f===q)?q:"hamisi")})();
-(function(){const a=document.querySelector("nav a.on");if(a&&a.scrollIntoView&&a.parentElement.scrollWidth>a.parentElement.clientWidth){a.parentElement.scrollLeft=a.offsetLeft-20}})();
+
+(function(){const m=document.getElementById("menu"),n=document.getElementById("nav");if(!m||!n)return;
+m.addEventListener("click",()=>{const o=n.classList.toggle("open");m.setAttribute("aria-expanded",o)});
+n.addEventListener("click",e=>{if(e.target.closest("a")){n.classList.remove("open");m.setAttribute("aria-expanded","false")}})})();
