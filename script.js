@@ -1,26 +1,11 @@
 (function(){
 var nav=document.getElementById('nav'),mb=document.getElementById('menu');
 if(mb)mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
-
-/* subject bloom */
-var fan=document.querySelector('.fan');
-if(fan){
-  var bloom=fan.closest('.bloom'),pets=fan.querySelectorAll('.pet'),panels=document.querySelectorAll('.panel');
-  var pick=function(k,user){
-    fan.classList.add('has-on');
-    pets.forEach(function(p){var on=p.dataset.k===k;p.classList.toggle('on',on);p.setAttribute('aria-pressed',on)});
-    panels.forEach(function(p){p.hidden=p.dataset.k!==k});
-  };
-  pets.forEach(function(p){
-    p.addEventListener('click',function(){pick(p.dataset.k,true)});
-    p.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover)').matches)pick(p.dataset.k)});
-    p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(p.dataset.k,true)}});
-  });
-  pick(pets[3].dataset.k);
-  requestAnimationFrame(function(){bloom.classList.add('go')});
-}
-
-/* teacher filter */
+var w=document.querySelectorAll('.watch');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.4});
+  w.forEach(function(el){io.observe(el)});
+}else{w.forEach(function(el){el.classList.add('in')})}
 var fl=document.querySelectorAll('.fl');
 if(fl.length){
   var apply=function(f){
@@ -31,8 +16,6 @@ if(fl.length){
   var q=new URLSearchParams(location.search).get('f');
   apply(q&&Array.prototype.some.call(fl,function(b){return b.dataset.f===q})?q:'hamisi');
 }
-
-/* registration -> WhatsApp */
 var fm=document.getElementById('reg');
 if(fm)fm.addEventListener('submit',function(e){
   e.preventDefault();
