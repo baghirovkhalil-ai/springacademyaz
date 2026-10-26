@@ -25,3 +25,38 @@ ap(q&&[...fl].some(b=>b.dataset.f===q)?q:"hamisi")})();
 (function(){const m=document.getElementById("menu"),n=document.getElementById("nav");if(!m||!n)return;
 m.addEventListener("click",()=>{const o=n.classList.toggle("open");m.setAttribute("aria-expanded",o)});
 n.addEventListener("click",e=>{if(e.target.closest("a")){n.classList.remove("open");m.setAttribute("aria-expanded","false")}})})();
+
+/* quiz game */
+(function(){const box=document.getElementById("quiz");if(!box)return;
+const Q=[
+{s:"Azərbaycan dili",c:"#ff4d5a",f:"az",q:"“Kitab” sözü nitqin hansı hissəsidir?",o:["Sifət","İsim","Fel","Zərf"],a:1,x:"“Nə?” sualına cavab verən, əşya bildirən sözlər isimdir."},
+{s:"Riyaziyyat",c:"#3b7bff",f:"riy",q:"12 × 12 − 44 = ?",o:["88","96","100","108"],a:2,x:"12 × 12 = 144, 144 − 44 = 100."},
+{s:"Kimya",c:"#34d399",f:"kim",q:"Havada ən çox hansı qaz var?",o:["Oksigen","Karbon qazı","Hidrogen","Azot"],a:3,x:"Havanın təxminən 78%-i azotdur, oksigen isə təxminən 21%."},
+{s:"Fizika",c:"#a78bfa",f:"fiz",q:"İşığın vakuumda sürəti təxminən nə qədərdir?",o:["300 000 km/san","30 000 km/san","3 000 km/san","3 000 000 km/san"],a:0,x:"İşıq vakuumda saniyədə təxminən 300 000 km yol gedir."},
+{s:"Coğrafiya",c:"#fb923c",f:"cog",q:"Yer kürəsinin ən böyük okeanı hansıdır?",o:["Atlantik","Hind","Şimal Buzlu","Sakit"],a:3,x:"Sakit okean Yer səthinin təxminən üçdə birini əhatə edir."},
+{s:"İngilis dili",c:"#2dd4bf",f:"ing",q:"“Yesterday I ___ to school.” boşluğa hansı söz yazılmalıdır?",o:["go","went","gone","going"],a:1,x:"Yesterday keçmiş zaman bildirir; go feli düzgünsüz fel olub keçmişdə went olur."}];
+const L="ABCD",WA="https://wa.me/994504517423?text=";let i,sc,res;
+const $=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+function start(){box.innerHTML="";const w=$("div","qs");w.append($("span","qtag","MİNİ OYUN"),$("h3","","Biliyini yoxla"),$("p","","6 sual, hər fənndən biri. Düzgün cavab verdikcə yaşıl, səhv etdikcə qırmızı yanır. Hazırsan?"));
+const b=$("button","btn","Oyuna başla →");b.onclick=()=>{i=0;sc=0;res=[];ask()};w.append(b);box.append(w)}
+function dots(){const d=$("div","qdots");Q.forEach((_,k)=>d.append($("i",k<res.length?(res[k]?"ok":"no"):(k===i?"on":""))));d.append($("b","",(i+1)+" / "+Q.length));return d}
+function ask(){const q=Q[i];box.innerHTML="";const w=$("div","qs");w.append(dots());const t=$("span","qtag",q.s);t.style.setProperty("--c",q.c);w.append(t,$("p","qq",q.q));
+const o=$("div","qo");let done=false;
+q.o.forEach((x,k)=>{const b=$("button","","<b>"+L[k]+"</b>"+x);b.onclick=()=>{if(done)return;done=true;const ok=k===q.a;if(ok)sc++;res.push(ok);
+o.querySelectorAll("button").forEach((y,n)=>{y.disabled=true;if(n===q.a)y.classList.add("ok");else if(n===k)y.classList.add("no");else y.classList.add("dim")});
+w.querySelector(".qdots").replaceWith(dots());
+const e=$("div","qx","<b>"+(ok?"Düzdür! 🎉":"Düzgün cavab: "+L[q.a]+") "+q.o[q.a])+"</b>"+q.x);
+const n=$("button","btn",i<Q.length-1?"Növbəti sual →":"Nəticəni gör →");n.onclick=()=>{i++;i<Q.length?ask():fin()};w.append(e,n)};o.append(b)});
+w.append(o);box.append(w)}
+function fin(){box.innerHTML="";const w=$("div","qres");
+const r=$("div","qring",'<svg viewBox="0 0 160 160"><circle class="bg" cx="80" cy="80" r="70"/><circle class="fg" cx="80" cy="80" r="70"/></svg><span>'+sc+"/"+Q.length+"</span>");
+const m=sc===6?["Əla nəticə!","Hər fənndən xəta etmədin. Səni nümunə dərsdə görmək istərdik."]:sc>=4?["Çox yaxşı!","Bilikli görünürsən. Zəif qalan mövzuları müəllimlə möhkəmləndirmək olar."]:sc>=2?["Pis deyil!","Yaxşı başlanğıcdır. Düzgün plan və müəllimlə nəticə sürətlə artar."]:["Hələ başlanğıcdır!","Narahat olma, məhz bunun üçün buradayıq. Birlikdə addım-addım irəliləyərik."];
+const c=$("div","qs");c.append($("h3","",m[0]),$("p","",m[1]));
+const bd=$("div","qbad");Q.forEach((q,k)=>bd.append($("span",res[k]?"ok":"no",(res[k]?"✓ ":"✗ ")+q.s)));c.append(bd);
+const miss=Q.filter((q,k)=>!res[k]);const row=$("div","btns");row.style.margin="6px 0 0";
+const txt="Salam! Spring Academy saytındakı mini oyunda "+sc+"/"+Q.length+" bal topladım. Nümunə dərsə yazılmaq istəyirəm.";
+const a1=$("a","btn","Nümunə dərsə yaz →");a1.href=WA+encodeURIComponent(txt);a1.target="_blank";a1.rel="noopener";row.append(a1);
+if(miss.length){const a2=$("a","btn o","Zəif fənn: "+miss[0].s);a2.href="muellimler.html?f="+miss[0].f;row.append(a2)}
+const a3=$("button","btn o","Yenidən oyna");a3.onclick=start;row.append(a3);c.append(row);
+w.append(r,c);box.append(w);requestAnimationFrame(()=>requestAnimationFrame(()=>{r.querySelector(".fg").style.strokeDashoffset=440*(1-sc/Q.length)}))}
+start()})();

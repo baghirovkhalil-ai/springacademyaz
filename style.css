@@ -131,3 +131,38 @@ main{overflow-x:clip}
  nav a{padding:14px 12px;font-size:18px;border-radius:10px}
  nav a.on{box-shadow:inset 3px 0 0 var(--acc)}
 }
+
+/* quiz game */
+.quiz{margin-top:30px;border:1px solid var(--ln);border-radius:24px;background:var(--card);backdrop-filter:blur(12px);padding:clamp(22px,4vw,44px);position:relative;overflow:hidden;min-height:340px}
+.quiz::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--b),var(--acc),var(--r))}
+.qs{display:grid;gap:18px;justify-items:start}
+.qs h3{font-size:clamp(24px,3.4vw,34px)}
+.qs p{color:var(--mut);max-width:34em}
+.qdots{display:flex;gap:8px;width:100%;align-items:center}
+.qdots i{flex:1;height:6px;border-radius:6px;background:var(--ln);transition:background .3s}
+.qdots i.on{background:var(--acc)}.qdots i.ok{background:var(--g)}.qdots i.no{background:var(--r)}
+.qdots b{margin-left:8px;font:800 14px Manrope,sans-serif;color:var(--mut);white-space:nowrap}
+.qtag{display:inline-block;font:800 12.5px Manrope,sans-serif;letter-spacing:.08em;padding:5px 12px;border-radius:99px;background:var(--c);color:#fff}
+.qq{font:600 clamp(22px,3.2vw,32px)/1.25 Fraunces,serif;max-width:24em}
+.qo{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%}
+.qo button{text-align:left;padding:16px 18px;border-radius:14px;border:1.5px solid var(--ln);background:transparent;color:var(--ink);font:700 17px Manrope,sans-serif;cursor:pointer;transition:.2s;display:flex;gap:12px;align-items:center}
+.qo button b{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--ln);font-size:14px;flex:none}
+.qo button:hover:not(:disabled){border-color:var(--acc);transform:translateY(-2px)}
+.qo button:disabled{cursor:default}
+.qo button.ok{border-color:var(--g);background:color-mix(in srgb,var(--g) 18%,transparent)}.qo button.ok b{background:var(--g);color:#fff}
+.qo button.no{border-color:var(--r);background:color-mix(in srgb,var(--r) 16%,transparent);animation:shk .35s}.qo button.no b{background:var(--r);color:#fff}
+.qo button.dim{opacity:.5}
+@keyframes shk{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.qx{width:100%;padding:16px 18px;border-radius:14px;background:color-mix(in srgb,var(--acc) 12%,transparent);border-left:4px solid var(--acc);color:var(--ink);font-size:16px}
+.qx b{display:block;margin-bottom:2px}
+.qring{position:relative;width:170px;height:170px;flex:none}
+.qring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.qring circle{fill:none;stroke-width:12;stroke-linecap:round}
+.qring .bg{stroke:var(--ln)}.qring .fg{stroke:var(--acc);stroke-dasharray:440;stroke-dashoffset:440;transition:stroke-dashoffset 1.2s cubic-bezier(.2,.7,.2,1)}
+.qring span{position:absolute;inset:0;display:grid;place-items:center;font:800 46px Fraunces,serif;color:var(--acc)}
+.qres{display:grid;gap:26px;align-items:center}
+@media(min-width:760px){.qres{grid-template-columns:auto 1fr}}
+.qbad{display:flex;flex-wrap:wrap;gap:8px}
+.qbad span{font:700 13.5px Manrope,sans-serif;padding:6px 12px;border-radius:99px;border:1px solid var(--ln)}
+.qbad span.ok{border-color:var(--g);color:var(--g)}.qbad span.no{border-color:var(--r);color:var(--r)}
+@media(max-width:620px){.qo{grid-template-columns:1fr}}
