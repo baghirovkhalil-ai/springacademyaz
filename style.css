@@ -189,3 +189,65 @@ main{overflow-x:clip}
 .rx{top:14px;right:14px}.rp{left:12px;top:50%;transform:translateY(-50%)}.rn{right:12px;top:50%;transform:translateY(-50%)}
 @media(max-width:640px){.rgal{columns:2 150px;column-gap:10px}.rit{margin-bottom:10px;border-radius:12px}.rit figcaption{padding:10px 11px 12px}.rit b{font-size:15px}.rit small{font-size:12.5px}.rk{font-size:10px}.rlb .rp,.rlb .rn{display:none}}
 a.tph{display:block;cursor:zoom-in}
+/* ===== Müştəri istəkləri: ana səhifə bölmələri ===== */
+html{scroll-padding-top:90px}
+.online{display:inline-block;margin-top:14px;padding:10px 16px;border-radius:12px;border:1px dashed var(--acc);background:color-mix(in srgb,var(--acc) 10%,transparent);font-size:15px}
+.sh2{display:flex;gap:18px;align-items:flex-start;margin-bottom:26px}
+.sno{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--acc);color:#0b1b4d;font:800 24px Fraunces,serif;margin-top:4px}
+.sh2 h2{margin-top:6px}.sh2 .sub{margin-top:8px}
+/* qiymətlər */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pcol{background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:24px;backdrop-filter:blur(10px)}
+.pcol:first-child{border-color:color-mix(in srgb,var(--acc) 55%,transparent)}
+.phd p{color:var(--mut);font-size:14px}
+.pbig{font:800 48px/1 Fraunces,serif;color:var(--acc);margin:10px 0 4px}.pbig small{font:700 15px Manrope,sans-serif;color:var(--mut)}
+.plist{list-style:none;padding:0;margin:18px 0;display:grid;gap:0}
+.plist li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 2px;border-bottom:1px dashed var(--ln);font-weight:600}
+.plist li b{color:var(--acc);white-space:nowrap}
+.plist li.full span{color:var(--mut);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--mut) 60%,transparent)}
+.plist em{font-style:normal;font-size:12.5px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.plist .bad{background:color-mix(in srgb,var(--r) 16%,transparent);color:var(--r)}
+.plist .solo{background:color-mix(in srgb,var(--b) 16%,transparent);color:var(--b)}
+.psolo{display:grid;gap:8px}
+.psolo div{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:color-mix(in srgb,var(--b) 10%,transparent);font-weight:700}
+.psolo small{display:block;color:var(--mut);font-weight:600;font-size:12.5px}.psolo b{color:var(--ink);white-space:nowrap}
+.pnote{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.pnote div{padding:16px;border-radius:14px;border:1px solid var(--ln);background:var(--card);display:grid;gap:4px}
+.pnote span{color:var(--mut);font-size:13.5px}
+/* qeydiyyat və vakansiya */
+.regc{max-width:760px;display:grid;gap:12px}
+.rstep{display:flex;align-items:center;gap:10px;font-weight:800;margin-top:8px}.rstep small{color:var(--mut);font-weight:600}
+.rstep b{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--acc);color:#0b1b4d;font-size:13px}
+.seg2{display:flex;flex-wrap:wrap;gap:8px}
+.seg2 button,.rchips button{padding:11px 16px;border-radius:12px;border:1px solid var(--ln);background:transparent;color:var(--ink);font:700 14.5px Manrope,sans-serif;cursor:pointer;transition:.2s}
+.seg2 button.on,.rchips button.on{background:var(--acc);border-color:var(--acc);color:#0b1b4d}
+.rchips{display:flex;flex-wrap:wrap;gap:8px}
+.rchips button:disabled{opacity:.45;cursor:not-allowed;text-decoration:line-through}
+.srow{display:grid;grid-template-columns:1fr 190px auto;gap:8px;margin-bottom:8px}
+.srow input,.srow select,.vf input,.vf select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--ln);background:var(--card);color:var(--ink);font:600 15px Manrope,sans-serif}
+.srow select option,.vf select option{color:#0b1b4d}
+.sdel{width:46px;border-radius:12px;border:1px solid var(--ln);background:transparent;color:var(--r);font-size:22px;cursor:pointer}
+.srow:first-child{grid-template-columns:1fr 190px}
+.addst{justify-self:start;background:none;border:1px dashed var(--acc);color:var(--acc);padding:10px 16px;border-radius:12px;font:800 14px Manrope,sans-serif;cursor:pointer}
+.rsum{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--acc) 12%,transparent);font-weight:700;margin-top:6px}
+.rsum b{font:800 26px Fraunces,serif;color:var(--acc)}
+.rsend{justify-content:center;width:100%}
+.rhint{color:var(--r);font-weight:700;min-height:1em;margin:0}
+.vf{display:grid;gap:6px;font-weight:800;font-size:14px}
+.vdoc{display:flex;gap:10px;align-items:center;padding:14px;border-radius:12px;border:1px dashed var(--ln);color:var(--mut)}.vdoc b{color:var(--ink)}
+/* müəllimlər (kompakt) */
+.tgrid.mini{grid-template-columns:repeat(4,1fr);gap:16px}
+a.tc.mini{display:grid;gap:4px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:10px 10px 14px;transition:.25s}
+a.tc.mini:hover{transform:translateY(-4px);border-color:var(--c)}
+.mph{display:block;aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--c);margin-bottom:8px}
+.mph img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+a.tc.mini b{font:700 16px Fraunces,serif;padding:0 4px}a.tc.mini small{color:var(--mut);font-size:13px;padding:0 4px}
+a.tc.mini[hidden]{display:none}
+/* sınaqlar */
+.egrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.ecard{display:grid;gap:8px;justify-items:start;padding:20px;border-radius:16px;border:1px dashed var(--ln);background:var(--card)}
+.enum{font:800 34px Fraunces,serif;color:var(--acc);line-height:1}
+.ecard em{font-style:normal;font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--acc) 16%,transparent);color:var(--acc)}
+@media(max-width:1180px){#nav a{padding-left:9px;padding-right:9px;font-size:14px}}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr}.pnote{grid-template-columns:1fr 1fr}.tgrid.mini{grid-template-columns:repeat(3,1fr)}.egrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.sh2{gap:12px}.sno{width:42px;height:42px;font-size:20px;border-radius:12px}.pcol{padding:18px}.pbig{font-size:40px}.srow,.srow:first-child{grid-template-columns:1fr 130px}.srow .sdel{grid-column:1/-1;width:100%;height:36px}.tgrid.mini{grid-template-columns:1fr 1fr;gap:10px}.egrid{grid-template-columns:1fr 1fr}.pnote div{padding:12px}}

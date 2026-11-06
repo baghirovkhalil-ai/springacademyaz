@@ -33,11 +33,12 @@ const RESULTS = [
 ];
 (function () {
   const box = document.getElementById("rgal"); if (!box) return;
+  const LIM = +box.dataset.limit || 0, LIST = LIM ? RESULTS.slice(0, LIM) : RESULTS;
   const CAT = { all: "Hamısı", imtahan: "İmtahan nəticələri", rey: "Sizdən gələnlər", teltif: "Təltiflər" };
-  const cnt = k => k === "all" ? RESULTS.length : RESULTS.filter(r => r[1] === k).length;
+  const cnt = k => k === "all" ? LIST.length : LIST.filter(r => r[1] === k).length;
   const tabs = document.getElementById("rtabs");
   tabs.innerHTML = Object.keys(CAT).filter(k => cnt(k)).map((k, i) => `<button type="button" data-k="${k}" class="${i ? "" : "on"}">${CAT[k]} <span>${cnt(k)}</span></button>`).join("");
-  box.innerHTML = RESULTS.map((r, i) => `<figure class="rit" data-k="${r[1]}" data-i="${i}"><img src="${r[0]}" alt="${r[2]} — ${r[3]}" loading="lazy"><figcaption><span class="rk rk-${r[1]}">${CAT[r[1]]}</span><b>${r[2]}</b><small>${r[3]}</small></figcaption></figure>`).join("");
+  box.innerHTML = LIST.map((r, i) => `<figure class="rit" data-k="${r[1]}" data-i="${i}"><img src="${r[0]}" alt="${r[2]} — ${r[3]}" loading="lazy"><figcaption><span class="rk rk-${r[1]}">${CAT[r[1]]}</span><b>${r[2]}</b><small>${r[3]}</small></figcaption></figure>`).join("");
   tabs.onclick = e => { const b = e.target.closest("button"); if (!b) return; tabs.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); box.querySelectorAll(".rit").forEach(f => f.style.display = b.dataset.k === "all" || f.dataset.k === b.dataset.k ? "" : "none") };
   // böyütmə pəncərəsi
   const lb = document.createElement("div"); lb.className = "rlb"; lb.innerHTML = `<button class="rx" aria-label="Bağla">×</button><button class="rp" aria-label="Əvvəlki">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="rn" aria-label="Növbəti">›</button>`; document.body.appendChild(lb);
