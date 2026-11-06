@@ -251,3 +251,13 @@ a.tc.mini[hidden]{display:none}
 @media(max-width:1180px){#nav a{padding-left:9px;padding-right:9px;font-size:14px}}
 @media(max-width:900px){.pgrid{grid-template-columns:1fr}.pnote{grid-template-columns:1fr 1fr}.tgrid.mini{grid-template-columns:repeat(3,1fr)}.egrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.sh2{gap:12px}.sno{width:42px;height:42px;font-size:20px;border-radius:12px}.pcol{padding:18px}.pbig{font-size:40px}.srow,.srow:first-child{grid-template-columns:1fr 130px}.srow .sdel{grid-column:1/-1;width:100%;height:36px}.tgrid.mini{grid-template-columns:1fr 1fr;gap:10px}.egrid{grid-template-columns:1fr 1fr}.pnote div{padding:12px}}
+/* Vakansiya qrupu kartı */
+.vgrp{margin-top:22px;padding:26px;border-radius:22px;border:1px solid var(--ln);background:linear-gradient(160deg,rgba(37,211,102,.08),rgba(42,171,238,.08)),var(--card);display:grid;gap:16px}
+.vbadge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:rgba(245,194,75,.18);color:var(--acc)}
+.vgh h3{font:700 clamp(22px,3vw,28px)/1.2 Fraunces,Georgia,serif;margin:10px 0 6px}.vgh p{color:var(--mut);line-height:1.6}
+.vrules{list-style:none;margin:0;padding:0;display:grid;gap:8px}.vrules li{padding:11px 14px;border-radius:12px;background:var(--card);border:1px solid var(--ln);font-weight:600;font-size:15px}
+.vbtns{display:flex;gap:10px;flex-wrap:wrap}.vbtns .btn{flex:1 1 200px;text-align:center;justify-content:center}
+.btn.vwa{background:#25D366;color:#06210f}.btn.vtg{background:#2AABEE;color:#fff}
+.vlead{font-size:15px;color:var(--mut)}.vlead b{color:var(--ink)}
+.vnums{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.vnums a{padding:10px 14px;border-radius:12px;border:1px solid var(--ln);background:var(--card);font-weight:800;color:var(--ink);text-decoration:none}.vnums a:hover{border-color:var(--acc)}
+@media(max-width:640px){.vgrp{padding:18px 16px}.vnums a{flex:1 1 100%;text-align:center}}
