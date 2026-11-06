@@ -3,7 +3,7 @@ document.querySelectorAll(".rv").forEach(el=>io.observe(el));
 document.querySelectorAll("[data-n]").forEach(el=>{const n=+el.dataset.n,s=el.dataset.s||"";const st=performance.now();(function f(now){const t=Math.min(1,(now-st)/1400);el.textContent=Math.round(n*(1-Math.pow(1-t,3)))+s;if(t<1)requestAnimationFrame(f)})(st)});
 const sd=document.getElementById("send");
 if(sd)sd.onclick=()=>{const g=i=>document.getElementById(i).value;
-const t="Salam! Mən "+g("nm")+". "+g("sb")+" ("+g("bl")+") üzrə nümunə dərsə yazılmaq istəyirəm. "+g("ms");
+const t="Salam! Mən "+g("nm")+". "+(g("sn")?g("sn")+". ":"")+g("sb")+" ("+g("bl")+") üzrə nümunə dərsə yazılmaq istəyirəm. "+g("ms");
 window.open("https://wa.me/994504517423?text="+encodeURIComponent(t),"_blank")};
 (function(){const c=document.getElementById("cv"),x=c.getContext("2d");let W,H,P=[];
 const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
