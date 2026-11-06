@@ -1,18 +1,35 @@
 /* Nəticələr və sizdən gələnlər — yeni şəkil əlavə etmək üçün bu siyahıya bir sətir yaz:
-   ["img/results/r13.jpg", "kateqoriya", "Başlıq", "Qısa təsvir"]   kateqoriya: imtahan | rey | teltif */
+   ["img/results/r30.jpg", "kateqoriya", "Başlıq", "Qısa təsvir"]   kateqoriya: imtahan | rey | teltif */
 const RESULTS = [
+  ["img/results/r29.jpg", "imtahan", "96.2 bal", "Azərbaycan dili · qapalı testlərdə 21/22, açıq testlərin hamısı düz"],
+  ["img/results/r13.jpg", "imtahan", "100/5", "“Müəllimə, Azərbaycan dilindən 100/5 aldım”"],
   ["img/results/r02.jpg", "imtahan", "91.7 bal", "Azərbaycan dili (dövlət dili) imtahanı · Məmmədli S."],
   ["img/results/r10.jpg", "imtahan", "100 bal", "Azərbaycan dili KSQ-dən maksimum nəticə"],
   ["img/results/r05.jpg", "imtahan", "Qəbul imtahanı", "İmanova Günel · ana dili 85 bal"],
   ["img/results/r01.jpg", "imtahan", "78.3 bal", "Azərbaycan dili (dövlət dili) imtahanı · Talıbzadə A."],
   ["img/results/r03.jpg", "imtahan", "78.3 bal", "Azərbaycan dili (dövlət dili) imtahanı · Ağazadə İ."],
+  ["img/results/r23.jpg", "imtahan", "19 düz · 1 aylıq hazırlıq", "Müəllim: “Bu tələbə ilə cəmi 1 ay dərs keçmişəm”"],
+  ["img/results/r26.jpg", "imtahan", "Tarixdən 13 düz · 14 gün", "Müəllim: “Cəmi 14 gün dərs keçmişəm, 13 düzü çıxıb”"],
+  ["img/results/r27.jpg", "imtahan", "Tarixdən 20 düz", "Açıq suallar daxil 20 düz cavab"],
+  ["img/results/r22.jpg", "imtahan", "10 sualdan 8-i düz", "Ülkər · 9-cu sinif · diaqnostik qiymətləndirmə, 2 aylıq hazırlıq"],
   ["img/results/r07.jpg", "teltif", "2-ci yer", "Polad Sadayev · bilik yarışmasının təltifnaməsi"],
+  ["img/results/r14.jpg", "teltif", "Ay sonu söz yarışmasının qalibi", "Zeynəb İbrahimova · Spring Academy sertifikatı"],
+  ["img/results/r15.jpg", "teltif", "İki sertifikat", "Məryəm Muradlı · Spring Academy"],
+  ["img/results/r19.jpg", "rey", "“35 yaşımda qəbul oldum”", "Günel xanım: “Həm övladlarımın, həm mənim uğurlu nəticələrimizi görürük”"],
+  ["img/results/r25.jpg", "rey", "İstədiyi ixtisasa qəbul", "“Müəllim heyətiniz məni 1 ay yarıma arzuma çatdırdı”"],
   ["img/results/r04.jpg", "rey", "“Təkrardan afərin, 5 aldım”", "Sevinc · 5-ci sinif"],
   ["img/results/r09.jpg", "rey", "“Fənninizi sevdirdiz”", "Zeynəb · 9-cu sinif"],
   ["img/results/r08.jpg", "rey", "İngilis dili · Aytən müəllimə", "Valideyn: sıfırdan sinif əlaçısına qədər"],
   ["img/results/r11.jpg", "rey", "Riyaziyyat · Əsmər müəllimə", "Valideyn razılığı"],
   ["img/results/r06.jpg", "rey", "Tövsiyə ilə gələn ailələr", "Valideyn: “Uğurun fəallığını görüb nömrə istəyirlər”"],
-  ["img/results/r12.jpg", "rey", "Tarix və coğrafiya", "Şagird: “Məhz sizi seçdim”"]
+  ["img/results/r12.jpg", "rey", "Tarix və coğrafiya", "Şagird: “Məhz sizi seçdim”"],
+  ["img/results/r24.jpg", "rey", "“İngilis dilinə bağlandım”", "Ülkər · 9-cu sinif: “Evdə ingiliscə danışıram”"],
+  ["img/results/r21.jpg", "rey", "“KSQ-lər 90-ın üstü olur”", "Valideyn · Bənövşə müəllimə"],
+  ["img/results/r20.jpg", "rey", "3-4-cü siniflərdə yüksək bal", "Bənövşə müəllimə: sınaq və monitorinqlərdə yüksək nəticələr"],
+  ["img/results/r18.jpg", "rey", "“Sinifdə riyaziyyatdan ən güclüsü”", "Zəhra · 8-ci sinif · valideyn"],
+  ["img/results/r17.jpg", "rey", "“Axtardığım elə sizsiz”", "Ləman · 7-ci sinif · valideyn"],
+  ["img/results/r16.jpg", "rey", "Dostunu da gətirdi", "Gülyaz · 7-ci sinif: “Sinif yoldaşım da keçmək istəyir”"],
+  ["img/results/r28.jpg", "rey", "Aysun müəllimə", "Məlahət xanım: “Hər şey üçün çox təşəkkür edirəm”"]
 ];
 (function () {
   const box = document.getElementById("rgal"); if (!box) return;
