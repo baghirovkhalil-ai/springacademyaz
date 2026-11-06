@@ -17,7 +17,7 @@ addEventListener("resize",()=>{rs();if(rm)dr()});rs();dr()})();
 
 /* teacher filter */
 (function(){const fl=document.querySelectorAll(".fl");if(!fl.length)return;
-const ap=f=>{fl.forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===f));document.querySelectorAll(".tc").forEach(c=>{c.hidden=!(f==="hamisi"||c.dataset.s===f)})};
+const ap=f=>{fl.forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===f));document.querySelectorAll(".tc").forEach(c=>{c.hidden=!(f==="hamisi"||c.dataset.s.split(" ").includes(f))})};
 fl.forEach(b=>b.addEventListener("click",()=>{ap(b.dataset.f);history.replaceState(null,"","?f="+b.dataset.f)}));
 const q=new URLSearchParams(location.search).get("f");
 ap(q&&[...fl].some(b=>b.dataset.f===q)?q:"hamisi")})();

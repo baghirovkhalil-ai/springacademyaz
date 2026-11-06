@@ -188,3 +188,4 @@ main{overflow-x:clip}
 .rlb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:48px;height:48px;border-radius:50%;font-size:30px;line-height:1;cursor:pointer}
 .rx{top:14px;right:14px}.rp{left:12px;top:50%;transform:translateY(-50%)}.rn{right:12px;top:50%;transform:translateY(-50%)}
 @media(max-width:640px){.rgal{columns:2 150px;column-gap:10px}.rit{margin-bottom:10px;border-radius:12px}.rit figcaption{padding:10px 11px 12px}.rit b{font-size:15px}.rit small{font-size:12.5px}.rk{font-size:10px}.rlb .rp,.rlb .rn{display:none}}
+a.tph{display:block;cursor:zoom-in}
