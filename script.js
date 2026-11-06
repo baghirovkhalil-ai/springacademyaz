@@ -1,5 +1,13 @@
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
-document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+/* Görünmə animasiyası: sonradan JS ilə yaranan .rv elementləri də izlənir, heç bir element gizli qalmır */
+const showRv=el=>{el.classList.add("in");if(io)io.unobserve(el)};
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)showRv(e.target)}),{threshold:0,rootMargin:"0px 0px -6% 0px"}):null;
+const watchRv=root=>{if(!root||root.nodeType!==1)return;const l=root.matches&&root.matches(".rv:not(.in)")?[root]:[];root.querySelectorAll&&l.push(...root.querySelectorAll(".rv:not(.in)"));l.forEach(el=>io?io.observe(el):el.classList.add("in"))};
+watchRv(document.body);
+new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(watchRv))).observe(document.body,{childList:true,subtree:true});
+const sweepRv=()=>document.querySelectorAll(".rv:not(.in)").forEach(el=>{const r=el.getBoundingClientRect();if(r.height&&r.top<innerHeight)showRv(el)});
+let rvT;addEventListener("scroll",()=>{clearTimeout(rvT);rvT=setTimeout(sweepRv,120)},{passive:true});
+addEventListener("load",()=>setTimeout(sweepRv,200));addEventListener("resize",sweepRv);
+if(matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("rm");
 document.querySelectorAll("[data-n]").forEach(el=>{const n=+el.dataset.n,s=el.dataset.s||"";const st=performance.now();(function f(now){const t=Math.min(1,(now-st)/1400);el.textContent=Math.round(n*(1-Math.pow(1-t,3)))+s;if(t<1)requestAnimationFrame(f)})(st)});
 const sd=document.getElementById("send");
 if(sd)sd.onclick=()=>{const g=i=>document.getElementById(i).value;
