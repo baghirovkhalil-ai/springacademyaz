@@ -1,8 +1,14 @@
 /* Nəticələr və sizdən gələnlər — yeni şəkil əlavə etmək üçün bu siyahıya bir sətir yaz:
-   ["img/results/r30.jpg", "kateqoriya", "Başlıq", "Qısa təsvir"]   kateqoriya: imtahan | rey | teltif */
+   ["img/results/r47.jpg", "kateqoriya", "Başlıq", "Qısa təsvir"]   kateqoriya: imtahan | rey | teltif */
 const RESULTS = [
   ["img/results/r29.jpg", "imtahan", "96.2 bal", "Azərbaycan dili · qapalı testlərdə 21/22, açıq testlərin hamısı düz"],
   ["img/results/r13.jpg", "imtahan", "100/5", "“Müəllimə, Azərbaycan dilindən 100/5 aldım”"],
+  ["img/results/r43.jpg", "imtahan", "Ana dili · 85.3 bal", "Süleymanova Aygün · 11.05.2025 qəbul imtahanı — bir ay əvvəlki 68.3-dən 85.3-ə"],
+  ["img/results/r44.jpg", "imtahan", "Ana dili · 68.3 bal", "Süleymanova Aygün · 06.04.2025 · Zəhra müəllimə"],
+  ["img/results/r45.jpg", "imtahan", "Ana dili · 79.4 və 76.7 bal", "Sahilə müəllimənin şagirdləri: Zamanlı Arif, Şükürova Fidan"],
+  ["img/results/r40.jpg", "imtahan", "Liseyə qəbul · 33.38 bal", "Musayeva Türkay · 50 baldan 33.38"],
+  ["img/results/r42.jpg", "imtahan", "Liseyə qəbul", "Ovçuyev Şamil"],
+  ["img/results/r46.jpg", "imtahan", "6 nümunəvi nəticə", "İlahə Həsənova müəllimənin şagirdləri"],
   ["img/results/r02.jpg", "imtahan", "91.7 bal", "Azərbaycan dili (dövlət dili) imtahanı · Məmmədli S."],
   ["img/results/r10.jpg", "imtahan", "100 bal", "Azərbaycan dili KSQ-dən maksimum nəticə"],
   ["img/results/r05.jpg", "imtahan", "Qəbul imtahanı", "İmanova Günel · ana dili 85 bal"],
@@ -15,6 +21,17 @@ const RESULTS = [
   ["img/results/r07.jpg", "teltif", "2-ci yer", "Polad Sadayev · bilik yarışmasının təltifnaməsi"],
   ["img/results/r14.jpg", "teltif", "Ay sonu söz yarışmasının qalibi", "Zeynəb İbrahimova · Spring Academy sertifikatı"],
   ["img/results/r15.jpg", "teltif", "İki sertifikat", "Məryəm Muradlı · Spring Academy"],
+  ["img/results/r41.jpg", "teltif", "TİMO · gümüş medal", "Məmmədli Oğuz · olimpiadada gümüş medal"],
+  ["img/results/r39.jpg", "teltif", "Olimpiada · milli tur", "Leyla Kazımova · Future Intelligence Students Olympiad"],
+  ["img/results/r34.jpg", "rey", "Sınaqda 20 sualdan 17 düz", "Fatimə · 5-ci sinif · valideyn: “Əvvəllər səhvləri çox olurdu”"],
+  ["img/results/r38.jpg", "rey", "“Hər şeyi ən kiçik ayrıntısına qədər izah edirsiniz”", "Aylin · 8-ci sinif · Esmira müəllimə"],
+  ["img/results/r37.jpg", "rey", "“Bu qədər irəliləyiş gözləmirdim”", "Fidan · 11-ci sinif · Sahilə müəllimə"],
+  ["img/results/r30.jpg", "rey", "“Müəlliməmizi sevdiyimiz üçün dərs oxuyuruq”", "Fatimə · 8-ci sinif · onlayn"],
+  ["img/results/r31.jpg", "rey", "“Spring Academy-nin müəllimləri əladır”", "Xədicə · 6-cı sinif"],
+  ["img/results/r32.jpg", "rey", "Riyaziyyat · Aidə müəllimə", "Valideyn: “Məktəb dərslərinə də həvəsi artıb”"],
+  ["img/results/r33.jpg", "rey", "“Nəticəsindən razıyıq”", "3-cü sinif valideyni · riyaziyyat, Aidə müəllimə"],
+  ["img/results/r35.jpg", "rey", "Esmira və Aytən müəllimə", "Valideyn: “Peşəsini sevən müəllimlər”"],
+  ["img/results/r36.jpg", "rey", "Üç valideyndən rəy", "Sahilə, Esmira və Leyla müəllimələr haqqında"],
   ["img/results/r19.jpg", "rey", "“35 yaşımda qəbul oldum”", "Günel xanım: “Həm övladlarımın, həm mənim uğurlu nəticələrimizi görürük”"],
   ["img/results/r25.jpg", "rey", "İstədiyi ixtisasa qəbul", "“Müəllim heyətiniz məni 1 ay yarıma arzuma çatdırdı”"],
   ["img/results/r04.jpg", "rey", "“Təkrardan afərin, 5 aldım”", "Sevinc · 5-ci sinif"],
